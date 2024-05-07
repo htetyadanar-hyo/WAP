@@ -35,18 +35,6 @@ group.showList();
 // };
 // group.showList();
 
-// 4. Using Function Expression
-// let group = {
-//     title: "Our Group",
-//     students: ["John","Pete","Alice"],
-//     showList: function(){
-//         const result = s => {
-//             console.log(this.title + ":" + s);
-//         }
-//         this.students.forEach(result);
-//     }
-// };
-// group.showList();
 
 //5. Using invoke function
 // let group = {
