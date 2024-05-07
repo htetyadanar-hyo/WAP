@@ -40,7 +40,6 @@ group.showList();
 //     title: "Our Group",
 //     students: ["John","Pete","Alice"],
 //     showList: function(){
-//         let self = this;
 //         const result = s => {
 //             console.log(this.title + ":" + s);
 //         }
