@@ -35,17 +35,18 @@ group.showList();
 // };
 // group.showList();
 
-// 4. Using Call & Bind Function
-// let group = {
-//     title: "Our Group",
-//     students: ["John", "Pete", "Alice"],
-//     showList: function () {
-//         const printStudent = function (student) {
-//             console.log(this.title + ": " + student);
-//         };
-//         this.students.forEach(printStudent.call.bind(printStudent, this));
-//     }
-// };
+//4. Using apply functon
+let group = {
+    title: "Our Group",
+    students: ["John","Pete","Alice"],
+    showList: function(){
+        const result = function(student){
+            console.log(this.title + ":" + student);
+        }
+        this.students.forEach(s => result.apply(group,[s]));
+    }
+}
+group.showList();
 
 //5. Using invoke function
 // let group = {
