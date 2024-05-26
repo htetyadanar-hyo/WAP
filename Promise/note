@@ -1,0 +1,9 @@
+Pending: result => undefined
+Fullfilled: result => value
+Rejected: result => error object
+
+Only, resolve and reject are async.
+Others are sync.
+
+
+
