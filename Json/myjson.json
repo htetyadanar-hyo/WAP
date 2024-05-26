@@ -1,0 +1,13 @@
+
+
+
+{
+    "firstname": "John",
+    "age": 18,
+    "isAdmin": true,
+    "courses": [
+        {"id": 472, "name": "WAP"},
+        {"id": 545, "name": "WAA"}
+    ],
+    "offer": null
+}
