@@ -1,0 +1,30 @@
+function foo(a,b,c){
+    console.log(this);
+}
+foo();
+console.log(this);
+
+{
+    console.log(this);
+}
+
+// If in a function, then the containing object is ‘window’
+// in “use strict” mode→ undefined
+// In function, window
+'use strict'
+function foo(){
+    console.log(this);
+}
+foo();
+
+// In method, this refer to its object.
+const user = {
+    name: "Htet",
+    age: 21,
+    getInfo: function(){
+        console.log(this);
+        console.log("Hi" + this.name);
+    }
+}
+user.getInfo();
+

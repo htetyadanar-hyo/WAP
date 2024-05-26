@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <!--name is used to show file:///Users/htetyadanaroo/Documents/WAP/Review/Regular%20Expression/regularExp.html?firstName=Htet#-->
+        <!--value is used to be able to show the default value in form-->
+        FirstName: <input type="text" name="firstName" pattern="[A-Za-z]{1,}" title="At least one character">
+        <!-- Note that html5 has implicit anchors ^ and $, so abc is really
+        ^abc$
+        Regular expressions are case-sensitive by default. -->
+        <br><br>
+        Input: <input type="text" name="input" pattern="ABC" title="Please type capital ABC">
+        <br><br>
+        <!-- WildCards . -->
+        WildCards Testing: <input type="text" name="wild" pattern=".oo.y" title="Please type .oo.y">
+        <br><br>
+        <!-- Special Character () | \ -->
+        Special Character Testing 1: <input type="text" name="special" pattern="(abc|def|g)"
+            title="Please type abc or def or g">
+        Special Character Testing 2: <input type="text" name="special" pattern="\.oo\.y" title="Please type .oo.y">
+        <br><br>
+        <!-- Quantifiers * + ? {min,max}-->
+        Quantifier (*) Testing 1: <input type="text" name="quantifier" pattern="abc*"
+            title="Please type abc (c 0 or more)">
+        Quantifier (+) Testing 2: <input type="text" name="quantifier" pattern="a+bc+"
+            title="lease type abc (ac 1 or more)">
+        <br><br>
+        Quantifier (?) Testing 3: <input type="text" name="quantifier" pattern="a(bc)?"
+            title="lease type abc (bc 0 or 1)">
+        Quantifier (min,max) Testing 4: <input type="text" name="quantifier" pattern="a{3,}bc"
+            title="lease type abc (a 2 to 4)">
+        <br><br>
+        <!-- 
+        ^ represents the beginning of the string or line;
+        $ represents the end
+        Jess matches all strings that contain Jess;
+        ^Jess matches all strings that start with Jess;
+        Jess$ matches all strings that end with Jess;
+        ^Jess$ matches the exact string "Jess" only
+        ^Mart.*Stepp$ matches "MartStepp", "Marty
+        Stepp", "Martin D Stepp", ... but NOT "Marty
+        Stepp stinks" or "I H8 Martin Stepp" !-->
+
+        <!-- CharacterSet [] -->
+        CharacterSet Testing 1: <input type="text" name="characterSet" pattern="[bcd]art"
+            title="Please type bart cart dart">
+        CharacterSet Testing 2: <input type="text" name="characterSet" pattern="what[!*?]?-"
+            title="Please type what? what! what* what">
+        <br><br>
+
+        <!-- Characterranges [] -->
+        CharacterRange Testing 1: <input type="text" name="characterRange" pattern="[a-zA-Z0-9]"
+            title="Please type a to z or AtoZ or 0to9">
+        CharacterRange Testing 2: <input type="text" name="characterRange" pattern="[^abcd]"
+            title="Please type not a or b or c or d">
+        <br><br>
+        CharacterRange Testing 3: <input type="text" name="characterRange" pattern="[+\-]?[0-9]+" title="optional + or -, followed by at least
+        one digit">
+        CharacterRange Testing 4: <input type="text" name="characterRange" pattern="[ABCDF][+\-]"
+            title="Please type not a or b or c or d">
+        <br><br>
+        <!-- Escape Sequence . -->
+        Escape Sequence Testing 1: <input type="text" name="escape" pattern="\d" title="Please type 0-9">
+        <br><br>
+        Escape Sequence Testing 2: <input type="text" name="escape" pattern="\D" title="Please type not 0-9">
+        <br><br>
+        Escape Sequence Testing 3: <input type="text" name="escape" pattern="\w" title="Please type a-zA-Z0-9">
+        <br><br>
+        Escape Sequence Testing 4: <input type="text" name="escape" pattern="\W" title="Please type a-zA-Z0-9">
+        <br><br>
+        Escape Sequence Testing 5: <input type="text" name="escape" pattern="\s" title="Please type  \t, \n, etc.">
+        <br><br>
+        <!-- Quote 
+            x27 is a single quote and \x22 is a double quote -->
+        Quote <input type="text" name="quote" pattern="[^\x27\x22]" title="Please type quote">
+        <br><br>
+        <!--My Reviews-->
+        Phone: <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="35">
+        <br><br>
+        month/day/year: <input type="text" name="date" pattern="(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}" size="35">
+        <br><br>
+        Grade: <input type="text" name="grade" pattern="([ABC][+\-]?|NC)" size="35">
+        <br><br>
+        Amount: <input type="text" name="amount" pattern="\$[1-9]\d{2,}(\.\d{1,2})?" size="35">
+        <br><br>
+        <input type="submit">
+    </form>
+    <form action="demo_form.jsp">
+        Homepage:
+        <input type="url" name="website" pattern="https?://.+" title="Include http://">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

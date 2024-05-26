@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //'use strict'
+        // function foo(){
+        //     mah = 10;
+        // }
+        // foo();
+        // console.log(mah);
+        function foo2() {
+            console.log(this); //Window
+            console.log("Start");
+            return function () {
+                console.log("Inside");
+            }
+        }
+        setTimeout(foo2, 1000); //Immediate execute
+        console.log("End");
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
