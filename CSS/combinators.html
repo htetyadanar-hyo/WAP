@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* A B -> A, B: HTML Element selector, id selector, class selector */
+
+    /*div span : select all spans which are children of div */
+    div span {
+        color: red;
+    }
+
+    /* div > span: select all spans which are direct children of div  */
+
+    div > span {
+        color: brown;
+        background-color: yellow;
+    }
+ 
+    .error > span {
+        font-size: 30px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        This is a Div
+        <p>This is a P <span>!!!</span></p>
+        <span>This is a span</span>
+    </div>
+    <p class="error">
+        This is another <span>P</span>
+    </p>
+
+    <div class="error">
+        This is another <span>P</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+#selector{
+    word-spacing: 5px;
+    color: blue;
+}
+.group,#gp{
+    color:blue;
+}
+.mainClass{
+    font-weight: bold;
+    color: red;
+}
+strong{
+    color:red;
+}
+#combinator span{
+    color: brown;
+}
+#directCombinator > span{
+    color: brown;
+} 
+.one{
+    color:burlywood;
+}
+.one.two{
+    color:aquamarine;
+}
+span.one{
+    color:blueviolet;
+}
+span.one.two{
+    color: orchid;
+}
+div#main{
+    color:chartreuse;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1::first-letter{
+    font-size: 20px;
+}

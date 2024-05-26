@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StyleConflict 1</title>
+        <style>
+            div,p,.special{
+                color:blue;
+            }
+            div{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="special">This is a div</div> -->
+        <div>This is a div</div>
+        <p>This is a p</p>
+        <h1>Mahrishi</h1>
+        <h2 class="special">WAP</h2>
+    </body>
+</html>

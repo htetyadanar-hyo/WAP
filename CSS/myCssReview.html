@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./mycss.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="selector">
+            Selectors
+            <p class="mainClass">There are three selectors </p>
+            <ol>
+                <li>HTML Element Selector <strong>(div, p, img, span..)</strong></li>
+                <li>id Selector <strong>Unique (#)</strong></li>
+                <li>class Selector <strong>(.)</strong></li>
+            </ol>
+        </div>
+        <hr>
+        <div id="combinator">
+            <p class="mainClass">A B can be either html element or id or class selector</p>
+            <p class="mainClass">A B</p>
+                <div>
+                    <p><span>span1</span></p>
+                    <span>span2</span>
+                </div>
+        </div>
+        <hr>
+        <div id="directCombinator">
+            <p class="mainClass">A > B (Direct Child)</p>
+            <p><span>span1</span></p>
+            <span>span2</span>
+            <p><span>span3</span></p>
+        </div>
+        <hr>
+        <div id="groupSelector">     
+            <p class="mainClass">A,B</p>
+            <p class="group">Hello</p>
+            <span id="gp">Hi Hi</span>
+            <span>Hey</span>
+            Hello
+        </div>
+        <hr>
+        <div id="joinedSelector">
+            <p class="mainClass">AB</p>
+            <div class="one" id="main">Testing 1......</div>
+            <span class="one two three">Testing 2.....</span>
+            <div class="one two">Testing 3.....</div>
+        </div>
+        <hr>
+        <div>
+            <p class="mainClass">psudo-class(State)</p>
+            <a href="#">My Link</a>
+        </div>
+        <hr>
+        <div>
+            <p class="mainClass">psudo-element(certain part of the content)</p>
+            <h1>hey change my first letter</h1>
+        </div>
+    </body>
+</html>
