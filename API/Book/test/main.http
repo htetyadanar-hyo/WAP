@@ -1,0 +1,52 @@
+### GET request to example server
+GET http://localhost:3000/books
+
+###
+GET http://localhost:3000/books/1
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "React",
+  "author": {
+    "authorId": 311,
+    "firstname": "Lucy",
+    "lastname": "Jack"
+  }
+}
+
+
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "React",
+  "author": {
+    "authorId": 311,
+    "firstname": "emma",
+    "lastname": "Jack"
+  }
+}
+
+###
+GET http://localhost:3000/books?firstname=L
+
+###
+DELETE http://localhost:3000/books/4
+
+###
+PUT http://localhost:3000/books/3
+Content-Type: application/json
+
+{
+  "title": "React Updated",
+  "author": {
+    "authorId": "311 Updated",
+    "firstname": "Lucy Updated",
+    "lastname": "Jack Updated"
+  }
+}
